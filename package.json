@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc",
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "dev": "nodemon src/app.ts",
+    "start": "npm run build && dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +19,7 @@
     "@types/morgan": "^1.9.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
     "tslint": "^6.1.3",
     "typescript": "^4.5.5"
   },
