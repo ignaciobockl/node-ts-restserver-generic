@@ -1,6 +1,11 @@
 import { Router } from 'express';
+import { check } from 'express-validator';
 
 import { createUser, getUsers, getUserById, updateUser, deleteUser } from '../controllers/users.controllers';
+
+import { existUserById, stateUser } from '../helpers/database-validators';
+
+import { validateFields } from '../middlewares/validate-field';
 
 
 const router = Router();
@@ -10,7 +15,11 @@ router.route('/')
     .post(createUser);
 
 router.route('/:id')
-    .get(getUserById)
+    .get([
+        check('id').custom(existUserById),
+        check('id').custom(stateUser),
+        validateFields
+    ],getUserById)
     .put(updateUser)
     .delete(deleteUser);
 

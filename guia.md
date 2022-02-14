@@ -16,3 +16,5 @@
 13. npm install --save sequelize
 14. npm i mysql2
 15. npm i ts-node -D // npm to compile typescript files
+16. npm i express-validators
+17. npm i --save-dev @types/express-validators
