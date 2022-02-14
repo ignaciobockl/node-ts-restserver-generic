@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "clean": "rimraf dist",
-    "dev": "nodemon src/app.ts",
-    "start": "npm run build && dist/app.js",
+    "build": "tsc", 
+    "clean": "rimraf dist", 
+    "dev": "nodemon src/app.ts", 
+    "start": "npm run build && dist/app.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
