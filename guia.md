@@ -10,4 +10,6 @@
 7. npm i express cors dotenv
 8. npm i @types/express -D
 9. npm i morgan -D
-10. nm i nodemon -D
+10. npm i nodemon -D
+11. npm i @types/cors -D
+12. npm i @types/morgan -D
