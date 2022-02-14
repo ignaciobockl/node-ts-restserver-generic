@@ -13,3 +13,6 @@
 10. npm i nodemon -D
 11. npm i @types/cors -D
 12. npm i @types/morgan -D
+13. npm install --save sequelize
+14. npm i mysql2
+15. npm i ts-node -D // npm to compile typescript files
