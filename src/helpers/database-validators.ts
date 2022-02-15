@@ -22,3 +22,8 @@ export const stateUser = async(_id: number) => {
     if ( !user ) { throw new Error('The user is deleted.') }
     // if (user.state === false) { throw new Error('The user is deleted.') }
 }
+
+export const existEmailUser = async(email: string) => {
+    const exist = await User.findOne({ where: { email, state: true } });
+    if ( email ) { throw new Error('The email is already registered in the database.') }
+}
