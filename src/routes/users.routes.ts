@@ -3,7 +3,7 @@ import { check } from 'express-validator';
 
 import { createUser, getUsers, getUserById, updateUser, deleteUser } from '../controllers/users.controllers';
 
-import { existUserById, stateUser } from '../helpers/database-validators';
+import { existUserById, stateUser, isValidId } from '../helpers/database-validators';
 
 import { validateFields } from '../middlewares/validate-field';
 
@@ -16,6 +16,7 @@ router.route('/')
 
 router.route('/:id')
     .get([
+        check('id').custom(isValidId),
         check('id').custom(existUserById),
         check('id').custom(stateUser),
         validateFields
